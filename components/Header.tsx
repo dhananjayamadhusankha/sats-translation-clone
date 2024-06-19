@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from './Logo'
 import { ThemeToggler } from './ThemeToggler'
+import UserButton from './UserButton'
 // className=' sticky top-0 z-50 bg-white dark:bg-gray-900'
 function Header() {
   return (
@@ -9,7 +10,7 @@ function Header() {
 
         <Logo />
 
-        <div>
+        <div className='flex items-center space-x-4'>
             {/* LanguageSelect */}
 
             {/* Session */}
@@ -17,6 +18,9 @@ function Header() {
 
             {/* DarkModeToggle */}
             <ThemeToggler />
+
+            {/* UserButton */}
+            <UserButton />
         </div>
         </nav>
         {/* Upgade Banner */}
