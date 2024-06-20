@@ -38,7 +38,7 @@ function PricingCards({ redirect }: { redirect: boolean }) {
 
   return (
     <div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto max-w-md gap-8 lg:max-w-4xl">
+      <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto max-w-md gap-8 lg:max-w-4xl px-5">
         {tiers.map((tier) => (
           <div
             key={tier.id}
@@ -89,12 +89,12 @@ function PricingCards({ redirect }: { redirect: boolean }) {
             {redirect ? (
               <Link
                 href="/register"
-                className="mt-8 bg-indigo-600 rounded-md text-center py-2 text-white font-semibold leading-6 cursor-pointer shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:opacity-80 block"
+                className="mt-8 bg-indigo-600 rounded-md text-center py-3 text-white font-semibold leading-6 cursor-pointer shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:opacity-80 block"
               >
                 Get Started Today
               </Link>
             ) : (
-              <div><CheckoutButton /></div>
+              tier.id && <CheckoutButton />
             )}
           </div>
         ))}
