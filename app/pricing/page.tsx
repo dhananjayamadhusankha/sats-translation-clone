@@ -1,3 +1,5 @@
+import PricingCards from "@/components/PricingCards";
+
 function PricingPage() {
   return (
     <div className="isolate overflow-hidden bg-gray-900">
@@ -38,7 +40,7 @@ function PricingPage() {
       </div>
 
       <div className="flow-root bg-white pb-24 sm:pb-32">
-        <div className="-mt-80">{/* <Pricingcards redirect={true}/> */}</div>
+        <div className="-mt-80"><PricingCards redirect={true}/></div>
       </div>
     </div>
   );
