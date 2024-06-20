@@ -13,7 +13,7 @@ function CreateChatButton() {
     route.push("/chat/${id}");
   };
   return (
-    <Button variant={"ghost"}>
+    <Button onClick={createNewChat} variant={"ghost"}>
       <MessageSquarePlus />
     </Button>
   );
